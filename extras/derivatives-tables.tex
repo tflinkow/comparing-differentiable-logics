@@ -1,0 +1,78 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[landscape, margin=1cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{adjustbox}
+
+\usepackage{derivative}
+
+% https://tex.stackexchange.com/a/641608
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+\UseTblrLibrary{functional}
+
+\begin{document}
+    \scriptsize
+
+    \begin{table}
+        \centering
+        \caption{Derivatives of Conjunction}
+        \label{tab:derivatives_conjunction}
+        \adjustbox{max width=\textwidth}{%
+            \begin{tblr}[evaluate=\fileInput]
+            {
+                colspec={lQ[c, mode=dmath]Q[c, mode=dmath]Q[c, mode=dmath]},
+                row{1}={font=\bfseries, mode=text},
+            }
+                \toprule
+                    Logic & T-norm $T(x,y)$ & $\pdv{}{x}$ & $\pdv{}{y}$ \\
+                \midrule
+                    \fileInput{derivatives-conjunction}
+                \bottomrule
+            \end{tblr}
+        }
+    \end{table}
+
+    \begin{table}
+        \centering
+        \caption{Derivatives of Disjunction}
+        \label{tab:derivatives_disjunction}
+        \adjustbox{max width=\textwidth}{%
+            \begin{tblr}[evaluate=\fileInput]
+            {
+                colspec={lQ[c, mode=dmath]Q[c, mode=dmath]Q[c, mode=dmath]},
+                row{1}={font=\bfseries, mode=text},
+            }
+                \toprule
+                    Logic & Disjunction $x\vee y$ & $\pdv{}{x}$ & $\pdv{}{y}$ \\
+                \midrule
+                    \fileInput{derivatives-disjunction}
+                \bottomrule
+            \end{tblr}
+        }
+    \end{table}
+
+    \begin{table}
+        \centering
+        \caption{Derivatives of Implication}
+        \label{tab:derivatives_implication}
+        \adjustbox{max width=\textwidth}{%
+            \begin{tblr}[evaluate=\fileInput]
+            {
+                colspec={lQ[c, mode=dmath]Q[c, mode=dmath]Q[c, mode=dmath]},
+                row{1}={font=\bfseries, mode=text},
+            }
+                \toprule
+                    Logic & Implication $x\implies y$ & $\pdv{}{x}$ & $\pdv{}{y}$ \\
+                \midrule
+                    \fileInput{derivatives-implication}
+                \bottomrule
+            \end{tblr}
+        }
+    \end{table}
+\end{document}

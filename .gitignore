@@ -1,0 +1,28 @@
+__pycache__
+.DS_Store
+.vscode/
+
+data/
+
+# LaTeX temporary files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.spl
+*.synctex.gz
+*.toc
+
+*.pdf
+
+# force-push with git add -f reports/**/*.csv before release
+reports/**/*.csv
+
+extras/derivatives-conjunction.tex
+extras/derivatives-disjunction.tex
+extras/derivatives-implication.tex
+
+extras/table.consistency.tex
