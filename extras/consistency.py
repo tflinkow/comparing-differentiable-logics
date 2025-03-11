@@ -8,6 +8,7 @@ import numpy
 
 import codecs
 import sys
+
 sys.path.append(".")
 sys.path.append("..")
 

@@ -1,8 +1,7 @@
-from typing import Any
 import sympy
 
 from base.backends import Backend
-    
+
 class SympyBackend(Backend):
     def minimum(self, x, y):
         return sympy.Min(x, y)
@@ -13,10 +12,10 @@ class SympyBackend(Backend):
     def where(self, condition, x, y):
         return sympy.Piecewise((x, condition), (y, True))
 
-    def zeros_like(self, x):
+    def zeros_like(self, _x: None):
         return 0
 
-    def ones_like(self, x):
+    def ones_like(self, _x: None):
         return 1
 
     def symbol(self, x):

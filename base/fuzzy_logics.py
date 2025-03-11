@@ -62,7 +62,7 @@ class GoguenFuzzyLogic(ReichenbachFuzzyLogic):
         return self.backend.where(self.backend.logical_or(x <= y, x == 0.), self.backend.symbol(1.), self.backend.safe_div(y, x))
 
 class ReichenbachSigmoidalFuzzyLogic(ReichenbachFuzzyLogic):
-    def __init__(self, backend: Backend, s=9.0):
+    def __init__(self, backend: Backend, s=9.):
         super().__init__(backend, abbrv='RCS', name='ReichenbachSigmoidal', display_name=r'sig. Reichenbach')
         self.s = self.backend.ctor_param('s', s)
 

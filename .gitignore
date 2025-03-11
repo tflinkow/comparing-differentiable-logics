@@ -4,7 +4,6 @@ __pycache__
 
 data/
 
-# LaTeX temporary files
 *.aux
 *.bbl
 *.blg
@@ -16,13 +15,22 @@ data/
 *.synctex.gz
 *.toc
 
+*.csv
+*.onnx
+*.png
 *.pdf
 
-# force-push with git add -f reports/**/*.csv before release
-reports/**/*.csv
+*.vclo
+
+results/*
+!results/Makefile
+!results/results.py
+!results/tikz_settings.tex
 
 extras/derivatives-conjunction.tex
 extras/derivatives-disjunction.tex
 extras/derivatives-implication.tex
 
-extras/table.consistency.tex
+extras/table-consistency.tex
+
+verification/logs/

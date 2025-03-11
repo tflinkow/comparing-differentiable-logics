@@ -6,11 +6,14 @@ class DL2(Logic):
         super().__init__(backend, 'DL2', 'DL2')
 
     def LEQ(self, x, y):
-        return self.backend.clamp_min(x - y, 0.0)
+        return self.backend.clamp_min(x - y, 0.)
 
-    def NOT(self, x):
-        # technically, negation is not supported in DL2, but this allows to use base class implication definition
-        return 1.0 - x
+    def LT(self, x, y):
+        xi = self.backend.symbol(1.)
+        return self.AND(self.LEQ(x, y), xi * (x == y).float())
+
+    def NOT(self, _x: None):
+        raise NotImplementedError('DL2 does not have general negation - rewrite the constraint to push negation inwards, e.g. NOT(x <= y) should be (y < x)')
 
     def AND(self, x, y):
         return x + y

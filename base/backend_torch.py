@@ -62,4 +62,4 @@ class TorchBackend(Backend):
         return x / torch.where(y == 0., torch.finfo(y.dtype).eps, y)
 
     def safe_zero(self, x):
-        return torch.where(x == 0.0, torch.full_like(x, torch.finfo(x.dtype).eps), x)
+        return torch.where(x == 0., torch.full_like(x, torch.finfo(x.dtype).eps), x)

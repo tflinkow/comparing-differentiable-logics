@@ -7,6 +7,7 @@ import torch
 from collections import namedtuple
 
 import sys
+
 sys.path.append(".")
 sys.path.append("..")
 
@@ -19,8 +20,8 @@ def main():
 
     configs: list[Config] = [
         Config(SympyBackend(), sympy.Symbol('x'), sympy.Symbol('y')),
-        Config(NumpyBackend(), 0.25, 0.75),
-        Config(TorchBackend(), torch.tensor(0.25), torch.tensor(0.75)),
+        Config(NumpyBackend(), .25, .75),
+        Config(TorchBackend(), torch.tensor(.25), torch.tensor(.75)),
     ]
 
     for config in configs:
@@ -38,7 +39,9 @@ def main():
         for logic in logics:
             print(f"AND_{logic.display_name} is {logic.AND(config.x, config.y)}")
             print(f"OR_{logic.display_name} is {logic.OR(config.x, config.y)}")
-            print(f"IMPL_{logic.display_name} is {logic.IMPL(config.x, config.y)}")
+
+            if not isinstance(logic, DL2):
+                print(f"IMPL_{logic.display_name} is {logic.IMPL(config.x, config.y)}")
 
 if __name__ == '__main__':
     main()
