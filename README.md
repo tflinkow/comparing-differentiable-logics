@@ -1,14 +1,16 @@
 # Comparing Differentiable Logics for Learning with Logical Constraints
 
-Code for the *Science of Computer Programming* paper [Comparing Differentiable Logics for Learning with Logical Constraints](https://www.sciencedirect.com/science/article/pii/S016764232500019X).
+Code for the *Science of Computer Programming* paper [*Comparing differentiable logics for learning with logical constraints*](https://www.sciencedirect.com/science/article/pii/S016764232500019X).
 
 ```tex
-@article{flinkowComparingDifferentiableLogics2025a,
-  title   = {Comparing {{Differentiable Logics}} for {{Learning}} with {{Logical Constraints}}},
+@article{flinkowComparingDifferentiableLogics2025,
+  title   = {Comparing Differentiable Logics for Learning with Logical Constraints},
   author  = {Flinkow, Thomas and Pearlmutter, Barak A. and Monahan, Rosemary},
   year    = {2025},
-  month   = mar,
+  month   = sep,
   journal = {Science of Computer Programming},
+  volume  = {244},
+  pages   = {103280},
   issn    = {0167-6423},
   doi     = {10.1016/j.scico.2025.103280},
 }
